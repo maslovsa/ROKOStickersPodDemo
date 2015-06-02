@@ -36,6 +36,13 @@
 //			_stickers = responseObject;
 //		}
 //	}];
+    
+    
+    NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
+    [mutableArray addObject:[self getStickerPack: @"hats"]];
+    
+    _stickers = [mutableArray copy];
+    
 }
 
 - (void)dealloc {
@@ -54,6 +61,24 @@
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
+}
+
+- (RLStickerPackInfo *)getStickerPack:(NSString*)packName {
+    static int totalIdCounter = 0;
+    RLStickerPackInfo *packInfo = [RLStickerPackInfo new];
+    packInfo.title = packName;
+    packInfo.iconDefault = [UIImage imageNamed: [NSString stringWithFormat:@"%@_icon_default", packName]];
+    packInfo.iconSelected = [UIImage imageNamed: [NSString stringWithFormat:@"%@_icon_default", packName]];
+    packInfo.isLocked = NO;
+    packInfo.packID = totalIdCounter++;
+    int n = 1;
+    UIImage *i1 = [UIImage imageNamed:[NSString stringWithFormat:@"%@_%d", packName, n]];
+    n = 2;
+    UIImage *i2 = [UIImage imageNamed:[NSString stringWithFormat:@"%@_%d", packName, n]];
+    
+    packInfo.stickers = [NSArray arrayWithObjects: i1, i2, nil];
+    
+    return packInfo;
 }
 
 #pragma mark - Button Interaction
@@ -80,50 +105,36 @@
 	}
 }
 
-#pragma mark - RLCameraViewController Delegate
+#pragma mark - RLPhotoComposerDataSource implementation
 
 - (NSInteger)numberOfStickerPacksInComposer:(RLPhotoComposerController *)composer {
 	return [_stickers count];
 }
 
 - (NSInteger)numberOfStickersInPackAtIndex:(NSInteger)packIndex composer:(RLPhotoComposerController *)composer {
-	ROKOStickerPack *pack = _stickers[packIndex];
+	RLStickerPackInfo *pack = _stickers[packIndex];
 	return [pack.stickers count];
 }
 
 - (RLStickerPackInfo *)composer:(RLPhotoComposerController *)composer infoForStickerPackAtIndex:(NSInteger)packIndex {
-	ROKOStickerPack *pack = _stickers[packIndex];
-	UIImage *imageDefault = pack.unselectedIcon.image;
-	UIImage *imageSelected = pack.selectedIcon.image;
-
-//    create an instance of RLStickerPackInfo class
-	RLStickerPackInfo *packInfo = [RLStickerPackInfo new];
-
-//     and populate it's properties:
-	packInfo.title = pack.name;
-	packInfo.iconDefault = imageDefault;
-	packInfo.iconDefaultURL = pack.unselectedIcon.imageURL;
-	packInfo.iconSelected = imageSelected;
-	packInfo.iconSelectedURL = pack.selectedIcon.imageURL;
-	packInfo.isLocked = NO;
-	packInfo.packID = [pack.objectId integerValue];
-
-	return packInfo;
+	return _stickers[packIndex];
 }
 
 - (RLStickerInfo *)composer:(RLPhotoComposerController *)composer infoForStickerAtIndex:(NSInteger)stickerIndex packIndex:(NSInteger)packIndex {
-	ROKOStickerPack *pack = _stickers[packIndex];
+	RLStickerPackInfo *pack = _stickers[packIndex];
 	ROKOSticker *sticker = pack.stickers[stickerIndex];
 	UIImage *image = sticker.imageInfo.image;
 
 	RLStickerInfo *info = [RLStickerInfo new];
 	info.iconURL = sticker.imageInfo.imageURL;
 	info.icon = image;
-	info.name = [NSString stringWithFormat:@"%@_%@", pack.name, @(stickerIndex + 1)];
+	info.name = [NSString stringWithFormat:@"%@_%@", pack.title, @(stickerIndex + 1)];
 	info.stickerID = sticker.objectId.integerValue;
 
 	return info;
 }
+
+#pragma mark - RLPhotoComposerDelegate implementation
 
 - (void)composer:(RLPhotoComposerController *)composer didFinishWithPhoto:(UIImage *)photo {
 	return;
@@ -165,20 +176,20 @@
 }
 -(void)composer:(RLPhotoComposerController *)composer didSwitchToStickerPackAtIndex:(NSInteger)packIndex{
     
-        _currentWatermarkInfo = nil;
-        ROKOStickerPack *pack = _stickers[packIndex];
-
-        if(pack.useWatermark){
-            _currentWatermarkInfo = pack.watermark;
-            _currentWatermarkInfo.position = pack.watermarkPosition;
-            _currentWatermarkInfo.scale = pack.watermarkScaleFactor;
-        }        
+//        _currentWatermarkInfo = nil;
+//        ROKOStickerPack *pack = _stickers[packIndex];
+//
+//        if(pack.useWatermark){
+//            _currentWatermarkInfo = pack.watermark;
+//            _currentWatermarkInfo.position = pack.watermarkPosition;
+//            _currentWatermarkInfo.scale = pack.watermarkScaleFactor;
+//        }        
 }
 
 - (void)composer:(RLPhotoComposerController *)composer didRemoveSticker:(RLStickerInfo *)stickerInfo {
-	if (composer.projectWatermark) {
-		composer.projectWatermark = nil;
-	}
+//	if (composer.projectWatermark) {
+//		composer.projectWatermark = nil; //  FIX later
+//	}
 }
 
 #pragma mark - properties
