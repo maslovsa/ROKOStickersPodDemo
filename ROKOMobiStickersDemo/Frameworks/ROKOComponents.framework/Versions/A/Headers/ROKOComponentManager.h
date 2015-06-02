@@ -7,52 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ROKOHTTPClient.h"
-#import "ROKOLocationManager.h"
-
-//ROKOComponent
-
-typedef NS_ENUM(NSInteger, ROKOComponentStatus) {
-    kROKOComponentStatusInit = 0,
-    kROKOComponentStatusWaitingForRegistration,
-    kROKOComponentStatusRegistered,
-    kROKOComponentStatusRegistrationFailed
-};
-
-@interface ROKOComponent : NSObject
-@property (readonly, copy, nonatomic) NSString *componentID;
-@property (readonly, copy, nonatomic) NSString *componentVersion;
-@property (readonly, assign, nonatomic) ROKOComponentStatus status;
-
-- (instancetype)initWithID:(NSString *)componentID
-                   version:(NSString *)componentVersion;
-+ (NSError *)registrationError;
-@end
-
-
-
-//ROKOComponentManager
-
-extern NSString *const kROKOPushComponentID;
-extern NSString *const kROKOShareComponentID;
-extern NSString *const kROKOStickersComponentID;
-
-typedef void(^ROKOComponentCompletion)(id responseObject, NSError *error);
 
 @interface ROKOComponentManager : NSObject
 
-+ (void)registerComponentWithID:(NSString *)componentID
-                        version:(NSString *)componentVersion
-                     completion:(ROKOComponentCompletion)completion;
+@property (nonatomic, copy) NSString *baseURL;
+@property (nonatomic, copy) NSString *apiToken;
 
-+ (void)setUserWithID:(NSInteger)userID
-           completion:(ROKOComponentCompletion)completion;
++ (instancetype)sharedManager;
 
-+ (void)setProperties:(NSDictionary *)properties
-          componentID:(NSString *)componentID
-           completion:(ROKOComponentCompletion)completion;
+- (instancetype)initWithURL:(NSString *)baseURL;
 
-+ (ROKOComponent *)componentWithID:(NSString *)componentID;
-+ (NSInteger)userID;
+- (void)registerObject:(NSObject *)object withName:(NSString *)objectName;
+- (NSObject *)objectWithName:(NSString *)objectName;
+- (void)unregisterObject:(NSObject *)object;
+- (void)unregisterObjectWithName:(NSString *)objectName;
 
 @end

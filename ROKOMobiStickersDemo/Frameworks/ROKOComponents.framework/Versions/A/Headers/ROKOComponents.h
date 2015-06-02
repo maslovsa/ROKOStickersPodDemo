@@ -15,4 +15,5 @@
 #import <ROKOComponents/ROKOComponentCustomizer.h>
 #import <ROKOComponents/UIColor+ROKOComponents.h>
 #import <ROKOComponents/ROKOImageDataObject.h>
+#import <ROKOComponents/ROKOComponent.h>
 #import <ROKOComponents/NSDictionary+ROKOParsing.h>

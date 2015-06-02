@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ROKOComponent.h"
 
-@interface ROKOLogger : NSObject
+@interface ROKOLogger : ROKOComponent
 
 @property (nonatomic, copy) NSString *userId;
-@property (nonatomic, copy) NSString *token;
-@property (nonatomic, copy) NSString *baseURL;
 
 + (ROKOLogger*)sharedLogger;
 

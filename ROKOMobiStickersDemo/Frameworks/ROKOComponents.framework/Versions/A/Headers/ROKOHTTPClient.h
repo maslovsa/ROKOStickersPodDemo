@@ -8,14 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-extern NSString *const kROKOMobiAPITokenKey;
+#import "ROKOComponent.h"
 
 typedef void(^ROKOHTTPClientCompletion)(id responseObject, NSError *error);
 
-@interface ROKOHTTPClient : NSObject
-
-- (instancetype)initWithBaseURL:(NSString *)baseURL;
+@interface ROKOHTTPClient : ROKOComponent
 
 - (void)getDataWithURL:(NSString *)URLString parameters:(NSDictionary *)parameters completion:(ROKOHTTPClientCompletion)completion;
 

@@ -14,18 +14,14 @@
 @interface ViewController () {
 	ROKOStickersCustomizer *_customizer;
 	ROKOStickersScheme *_scheme;
-	ROKOStickersDataProvider *_dataProvider;
-	NSTimer *_timer;
-	NSArray *_stickers;
+	//ROKOStickersDataProvider *_dataProvider;
     ROKOStickersWatermarkInfo *_currentWatermarkInfo;
-}
 
-@property (assign, nonatomic) NSInteger unlockPackIndex;
-@property (copy, nonatomic) void (^unlockCompletionHanler)(BOOL unlocked);
+	NSArray *_stickers;
+}
 
 - (IBAction)takePhotoButtonPressed:(UIButton *)sender;
 - (IBAction)choosePhotoButtonPressed:(UIButton *)sender;
-- (IBAction)unlockContentButtonPressed:(UIButton *)sender;
 
 @end
 
@@ -34,19 +30,16 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	_customizer =  [[ROKOStickersCustomizer alloc]initWithBaseURL:@"rmsws.stage.rokolabs.com/external/v1/"];
-	_dataProvider = [[ROKOStickersDataProvider alloc]initWithBaseURL:@"rmsws.stage.rokolabs.com/external/v1/"];
-	[_dataProvider loadStickersWithCompletionBlock:^(id responseObject, NSError *error) {
-		if (!error) {
-			_stickers = responseObject;
-		}
-	}];
-	// Do any additional setup after loading the view.
-	_timer = [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(timerHandler:) userInfo:nil repeats:YES];
-	[_timer fire];
+//	_dataProvider = [[ROKOStickersDataProvider alloc]initWithBaseURL:@"rmsws.stage.rokolabs.com/external/v1/"];
+//	[_dataProvider loadStickersWithCompletionBlock:^(id responseObject, NSError *error) {
+//		if (!error) {
+//			_stickers = responseObject;
+//		}
+//	}];
 }
 
 - (void)dealloc {
-	[_timer invalidate];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -57,12 +50,10 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	[self loadDefaultScheme];
 }
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Button Interaction
@@ -85,14 +76,6 @@
 		photoComposer.delegate = self;
 		photoComposer.dataSource = self;
 
-		[self presentViewController:workflowController animated:YES completion:nil];
-	}
-}
-
-- (IBAction)unlockContentButtonPressed:(UIButton *)sender {
-	RLComposerWorkflowController *workflowController = [RLComposerWorkflowController buildComposerWorkflowWithType:kRLComposerWorkflowTypePhotoPicker useROKOCMS:YES];
-
-	if (nil != workflowController) {
 		[self presentViewController:workflowController animated:YES completion:nil];
 	}
 }
@@ -198,40 +181,7 @@
 	}
 }
 
-- (void)composer:(RLPhotoComposerController *)composer unlockStickerPack:(NSInteger)packIndex completion:(void (^)(BOOL))completionHandler {
-	self.unlockPackIndex = packIndex;
-	self.unlockCompletionHanler = completionHandler;
-
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello!"
-	                      message:@"To unlock, please enter code:"
-	                      delegate:self
-	                      cancelButtonTitle:@"Cancel"
-	                      otherButtonTitles:@"Continue", nil];
-
-	alert.alertViewStyle = UIAlertViewStyleSecureTextInput;
-	UITextField *alertTextField = [alert textFieldAtIndex:0];
-	alertTextField.keyboardType = UIKeyboardTypeNumberPad;
-	alertTextField.placeholder = @"Enter code";
-	[alert show];
-}
-
 #pragma mark - properties
 
-
-
-#pragma mark -
-#pragma mark Periodicaly loading
-
-- (void)loadDefaultScheme {
-	[_customizer loadSchemeWithCompletionBlock:^(ROKOStickersScheme *scheme, NSError *error) {
-		if (!error) {
-			_scheme = scheme;
-		}
-	}];
-}
-
-- (void)timerHandler:(NSTimer *)timer {
-	[self loadDefaultScheme];
-}
 
 @end

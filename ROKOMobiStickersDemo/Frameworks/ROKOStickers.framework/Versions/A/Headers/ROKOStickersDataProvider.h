@@ -9,16 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <ROKOComponents/ROKOComponents.h>
 
-@interface ROKOStickersDataProvider : NSObject
-
-/**
- *  Initialyzes a new data provider with specified URL
- *
- *  @param baseURL Path to the server
- *
- *  @return Initialized object
- */
-- (instancetype)initWithBaseURL:(NSString *)baseURL;
+@interface ROKOStickersDataProvider : ROKOComponent
 
 /**
  *  Loads stickers from server

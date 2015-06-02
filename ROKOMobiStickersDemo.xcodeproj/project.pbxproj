@@ -197,11 +197,12 @@
 		58F07A2D18D96E2B000BDECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F07A2B18D96E2B000BDECC /* Main.storyboard */; };
 		58F07A3218D96E2B000BDECC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F07A3118D96E2B000BDECC /* Images.xcassets */; };
 		58F07A5818D9723B000BDECC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F07A5718D9723B000BDECC /* QuartzCore.framework */; };
-		8F042AFE1B1C9622001D26A5 /* ROKOComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F042AF91B1C9622001D26A5 /* ROKOComponents.framework */; };
-		8F042AFF1B1C9622001D26A5 /* ROKOShare.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F042AFA1B1C9622001D26A5 /* ROKOShare.bundle */; };
-		8F042B001B1C9622001D26A5 /* ROKOShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F042AFB1B1C9622001D26A5 /* ROKOShare.framework */; };
-		8F042B011B1C9622001D26A5 /* ROKOStickers.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F042AFC1B1C9622001D26A5 /* ROKOStickers.bundle */; };
-		8F042B021B1C9622001D26A5 /* ROKOStickers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F042AFD1B1C9622001D26A5 /* ROKOStickers.framework */; };
+		8F0A28121B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A28111B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.m */; };
+		8F0A28191B1DC6D80097C8B1 /* ROKOComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0A28141B1DC6D80097C8B1 /* ROKOComponents.framework */; };
+		8F0A281A1B1DC6D80097C8B1 /* ROKOShare.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A28151B1DC6D80097C8B1 /* ROKOShare.bundle */; };
+		8F0A281B1B1DC6D80097C8B1 /* ROKOShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0A28161B1DC6D80097C8B1 /* ROKOShare.framework */; };
+		8F0A281C1B1DC6D80097C8B1 /* ROKOStickers.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A28171B1DC6D80097C8B1 /* ROKOStickers.bundle */; };
+		8F0A281D1B1DC6D80097C8B1 /* ROKOStickers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0A28181B1DC6D80097C8B1 /* ROKOStickers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -400,11 +401,13 @@
 		58F07A2C18D96E2B000BDECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58F07A3118D96E2B000BDECC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		58F07A5718D9723B000BDECC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		8F042AF91B1C9622001D26A5 /* ROKOComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ROKOComponents.framework; sourceTree = "<group>"; };
-		8F042AFA1B1C9622001D26A5 /* ROKOShare.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ROKOShare.bundle; sourceTree = "<group>"; };
-		8F042AFB1B1C9622001D26A5 /* ROKOShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ROKOShare.framework; sourceTree = "<group>"; };
-		8F042AFC1B1C9622001D26A5 /* ROKOStickers.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ROKOStickers.bundle; sourceTree = "<group>"; };
-		8F042AFD1B1C9622001D26A5 /* ROKOStickers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ROKOStickers.framework; sourceTree = "<group>"; };
+		8F0A28101B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROKOStickersSchemeCustomizer.h; sourceTree = "<group>"; };
+		8F0A28111B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROKOStickersSchemeCustomizer.m; sourceTree = "<group>"; };
+		8F0A28141B1DC6D80097C8B1 /* ROKOComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ROKOComponents.framework; sourceTree = "<group>"; };
+		8F0A28151B1DC6D80097C8B1 /* ROKOShare.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ROKOShare.bundle; sourceTree = "<group>"; };
+		8F0A28161B1DC6D80097C8B1 /* ROKOShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ROKOShare.framework; sourceTree = "<group>"; };
+		8F0A28171B1DC6D80097C8B1 /* ROKOStickers.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ROKOStickers.bundle; sourceTree = "<group>"; };
+		8F0A28181B1DC6D80097C8B1 /* ROKOStickers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ROKOStickers.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,7 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58EE087D1961F15900F1E40D /* ImageIO.framework in Frameworks */,
-				8F042AFE1B1C9622001D26A5 /* ROKOComponents.framework in Frameworks */,
+				8F0A28191B1DC6D80097C8B1 /* ROKOComponents.framework in Frameworks */,
 				588792BC18EB516500FD235F /* CoreLocation.framework in Frameworks */,
 				582E60891919065200F6C706 /* AVFoundation.framework in Frameworks */,
 				58A9F0101907396200073909 /* MessageUI.framework in Frameworks */,
@@ -422,13 +425,13 @@
 				58A9F00A1907394A00073909 /* Security.framework in Frameworks */,
 				58A9F0081907393F00073909 /* MediaPlayer.framework in Frameworks */,
 				58A9F0061907393600073909 /* CoreText.framework in Frameworks */,
-				8F042B021B1C9622001D26A5 /* ROKOStickers.framework in Frameworks */,
+				8F0A281D1B1DC6D80097C8B1 /* ROKOStickers.framework in Frameworks */,
 				58F07A1C18D96E2B000BDECC /* CoreGraphics.framework in Frameworks */,
 				58A9F0041907391F00073909 /* CoreMotion.framework in Frameworks */,
 				58A9F0021907391400073909 /* AssetsLibrary.framework in Frameworks */,
 				58A9F0001907390C00073909 /* AddressBook.framework in Frameworks */,
 				58F07A5818D9723B000BDECC /* QuartzCore.framework in Frameworks */,
-				8F042B001B1C9622001D26A5 /* ROKOShare.framework in Frameworks */,
+				8F0A281B1B1DC6D80097C8B1 /* ROKOShare.framework in Frameworks */,
 				58F07A1E18D96E2B000BDECC /* UIKit.framework in Frameworks */,
 				58F07A1A18D96E2B000BDECC /* Foundation.framework in Frameworks */,
 			);
@@ -747,8 +750,10 @@
 				58F07A2918D96E2B000BDECC /* AppDelegate.m */,
 				58E333AF19549D9B00DCD786 /* ViewController.h */,
 				58E333B019549D9B00DCD786 /* ViewController.m */,
+				8F0A28131B1DC6D80097C8B1 /* Frameworks */,
+				8F0A28101B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.h */,
+				8F0A28111B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.m */,
 				58F07A3118D96E2B000BDECC /* Images.xcassets */,
-				8F042AF81B1C9622001D26A5 /* Frameworks */,
 				58F07A2018D96E2B000BDECC /* Supporting Files */,
 				27644C091AF7AC1700E7D33F /* Launch.storyboard */,
 				58F07A2B18D96E2B000BDECC /* Main.storyboard */,
@@ -767,14 +772,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8F042AF81B1C9622001D26A5 /* Frameworks */ = {
+		8F0A28131B1DC6D80097C8B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F042AF91B1C9622001D26A5 /* ROKOComponents.framework */,
-				8F042AFA1B1C9622001D26A5 /* ROKOShare.bundle */,
-				8F042AFB1B1C9622001D26A5 /* ROKOShare.framework */,
-				8F042AFC1B1C9622001D26A5 /* ROKOStickers.bundle */,
-				8F042AFD1B1C9622001D26A5 /* ROKOStickers.framework */,
+				8F0A28141B1DC6D80097C8B1 /* ROKOComponents.framework */,
+				8F0A28151B1DC6D80097C8B1 /* ROKOShare.bundle */,
+				8F0A28161B1DC6D80097C8B1 /* ROKOShare.framework */,
+				8F0A28171B1DC6D80097C8B1 /* ROKOStickers.bundle */,
+				8F0A28181B1DC6D80097C8B1 /* ROKOStickers.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -846,7 +851,7 @@
 				58EE082B1961E3CB00F1E40D /* emoji_icon_default@2x.png in Resources */,
 				270903701ADBED7E0055292F /* emoji_9@2x.png in Resources */,
 				588769401975130A00A63ECA /* cake_5@2x.png in Resources */,
-				8F042AFF1B1C9622001D26A5 /* ROKOShare.bundle in Resources */,
+				8F0A281A1B1DC6D80097C8B1 /* ROKOShare.bundle in Resources */,
 				58EE08541961E3CB00F1E40D /* wedding_5@2x.png in Resources */,
 				58EF655E190BB94100D23ED3 /* Codes.plist in Resources */,
 				58EE08561961E3CB00F1E40D /* wedding_9@2x.png in Resources */,
@@ -930,7 +935,7 @@
 				27E6F37E1AD905CF000100B9 /* emoji_17@3x.png in Resources */,
 				27AA4F9B1ABAF3FB0007FDB7 /* hats_2@2x.png in Resources */,
 				58EE07FE1961E3CB00F1E40D /* baby_4@2x.png in Resources */,
-				8F042B011B1C9622001D26A5 /* ROKOStickers.bundle in Resources */,
+				8F0A281C1B1DC6D80097C8B1 /* ROKOStickers.bundle in Resources */,
 				58EE084E1961E3CB00F1E40D /* watermark_4@2x.png in Resources */,
 				27E6F3791AD905CF000100B9 /* emoji_12@3x.png in Resources */,
 				58876959197514F100A63ECA /* cat_9@2x.png in Resources */,
@@ -1021,6 +1026,7 @@
 			files = (
 				58F07A2A18D96E2B000BDECC /* AppDelegate.m in Sources */,
 				58F07A2618D96E2B000BDECC /* main.m in Sources */,
+				8F0A28121B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.m in Sources */,
 				58E333B119549D9B00DCD786 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

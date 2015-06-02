@@ -42,21 +42,6 @@
                                 <rect key="frame" x="0.0" y="226" width="320" height="99"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaT-Yj-S2J">
-                                <rect key="frame" x="192" y="397" width="216" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="IaT-Yj-S2J" secondAttribute="height" multiplier="18:5" id="rIe-vQ-bXX"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="choose_photo.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="110" y="445" width="180" height="50"/>
-                                </variation>
-                                <connections>
-                                    <action selector="choosePhotoButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1we-ro-HrW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyN-JD-NEu">
                                 <rect key="frame" x="70" y="325" width="180" height="50"/>
                                 <constraints>
@@ -84,6 +69,21 @@
                                     <constraint firstAttribute="width" secondItem="475-ne-fgz" secondAttribute="height" multiplier="88:85" id="CIK-OZ-Slq"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaT-Yj-S2J">
+                                <rect key="frame" x="70" y="393" width="180" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IaT-Yj-S2J" secondAttribute="height" multiplier="18:5" id="rIe-vQ-bXX"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="choose_photo.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="110" y="445" width="180" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="choosePhotoButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1we-ro-HrW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

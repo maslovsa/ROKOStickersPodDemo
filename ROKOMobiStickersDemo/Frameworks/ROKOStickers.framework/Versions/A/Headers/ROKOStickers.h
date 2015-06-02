@@ -17,6 +17,6 @@
 #import <ROKOStickers/ROKOStickersScheme.h>
 #import <ROKOStickers/UIViewController+ROKOCustomizer.h>
 #import <ROKOStickers/ROKOStickersCustomizer.h>
-#import <ROKOStickers/ROKOStickersDataProvider.h>
+#import <ROKOStickers/ROKOPortalStickersDataSource.h>
 #import <ROKOStickers/ROKOSticker.h>
 #import <ROKOStickers/ROKOStickerPack.h>

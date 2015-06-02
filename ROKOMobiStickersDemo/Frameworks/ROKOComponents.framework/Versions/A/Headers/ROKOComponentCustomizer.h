@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ROKOComponentScheme.h"
+#import "ROKOComponent.h"
 
 /**
  *  Block to be called when scheme loading is finished
@@ -20,16 +21,7 @@ typedef void (^CustomizerCompletionBlock)(NSDictionary *schemeData, NSError *err
 /**
  *  Manages schemes for different ROKO components
  */
-@interface ROKOComponentCustomizer : NSObject
-
-/**
- *  Initialyzes a new customizer object
- *
- *  @param baseURL Path to the server
- *
- *  @return Initialized object
- */
-- (instancetype)initWithBaseURL:(NSString *)baseURL;
+@interface ROKOComponentCustomizer : ROKOComponent
 
  /**
  *  Loads scheme from specified URL
@@ -52,11 +44,20 @@ typedef void (^CustomizerCompletionBlock)(NSDictionary *schemeData, NSError *err
  /**
  *  Loads saved scheme from local storage
  *
- *  @param schemeName Nmae of the scheme to be loaded
+ *  @param schemeName Name of the scheme to be loaded
  *
  *  @return Loaded scheme or nil
  */
 - (ROKOComponentScheme *)savedSchemeWithName:(NSString *)schemeName;
+
+/**
+ *  Loads saved scheme from URL
+ *
+ *  @param schemeURL URL of the scheme to be loaded
+ *
+ *  @return Loadede scheme or nil
+ */
+- (ROKOComponentScheme *)savedSchemeWithURL:(NSURL*)schemeURL;
 
 /**
  *  Loads image for given data object

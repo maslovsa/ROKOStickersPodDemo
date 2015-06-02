@@ -51,4 +51,6 @@ typedef NS_ENUM(NSInteger, RLPackButtonMode) {
 
 - (void)setInfo:(RLStickerPackInfo *)info forStickerPackAtIndex:(NSInteger)index;
 
+- (void)reloadData;
+
 @end
