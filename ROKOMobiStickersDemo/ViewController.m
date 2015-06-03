@@ -12,10 +12,8 @@
 #import <ROKOComponents/ROKOComponents.h>
 
 @interface ViewController () {
-	//ROKOStickersCustomizer *_customizer;
 	ROKOStickersScheme *_scheme;
-	//ROKOStickersDataProvider *_dataProvider;
-	ROKOStickersWatermarkInfo *_currentWatermarkInfo;
+	RLWatermarkInfo *_watermarkInfo;
 
 	NSArray *_stickerPacks;
 	NSDictionary *stickerPackToIconsCount;
@@ -30,19 +28,32 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	//_customizer =  [[ROKOStickersCustomizer alloc]initWithBaseURL:@"rmsws.stage.rokolabs.com/external/v1/"];
 
 	stickerPackToIconsCount = @{ @"glasses" : @10, @"hats" : @9, @"mustaches" : @9,
 		                         @"baby" : @22, @"cake" : @9, @"cat" : @12, @"emoji" : @18, @"wedding" : @12 };
-	// AllKEys
-    _stickerPacks = @[[self getStickerPack:@"glasses"],
-	                  [self getStickerPack:@"hats"],
-	                  [self getStickerPack:@"mustaches"],
-	                  [self getStickerPack:@"baby"],
-	                  [self getStickerPack:@"cake"],
-	                  [self getStickerPack:@"cat"],
-	                  [self getStickerPack:@"emoji"],
-	                  [self getStickerPack:@"wedding"]];
+    
+    NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:stickerPackToIconsCount.allKeys.count];
+    for (NSString* key in stickerPackToIconsCount.allKeys) {
+        [mutableArray addObject:[self getStickerPack:key]];
+    }
+    _stickerPacks = [mutableArray copy];
+    
+    
+    ROKONavigationBarScheme *naviScheme = [ROKONavigationBarScheme new];
+    naviScheme.controllerTitle = @"Stickers";
+    naviScheme.useTextButtons = YES;
+    naviScheme.navigationLeftButtonText = @"back";
+    naviScheme.navigationRightButtonText = @"next";
+    naviScheme.navigationBarColor = [UIColor whiteColor];
+    
+    ROKOStickersTrayScheme *trayScheme = [ROKOStickersTrayScheme new];
+    trayScheme.displayType = ROKOStickersTrayDisplayTypeIconOnly;
+    trayScheme.backgroundColor = [[UIColor alloc ] initWithWhite: 1 alpha: 0.5];
+    
+    _scheme = [ROKOStickersScheme new];
+    _scheme.configurationViaPortal = NO;
+    _scheme.navigationBarScheme = naviScheme;
+    _scheme.trayScheme = trayScheme;
 }
 
 - (void)dealloc {
@@ -76,6 +87,12 @@
 	packInfo.iconDefault = [UIImage imageNamed:[NSString stringWithFormat:@"%@_icon_default", packName]];
 	packInfo.iconSelected = [UIImage imageNamed:[NSString stringWithFormat:@"%@_icon_selected", packName]];
 	packInfo.isLocked = NO;
+    if ([packName isEqualToString: @"wedding"]) {
+        RLWatermarkInfo *info = [RLWatermarkInfo new];
+        info.icon = [UIImage imageNamed: @"watermark_3"];
+        info.position = kRLWatermarkPositionBottomRight;
+        packInfo.watermarkInfo = info;
+    }
 
     NSNumber *iconsCount = [stickerPackToIconsCount objectForKey:packName];
 	if (iconsCount) {
@@ -146,7 +163,6 @@
 }
 
 - (void)composer:(RLPhotoComposerController *)composer willAppearAnimated:(BOOL)animated {
-	composer.projectWatermark = nil;
 	if (_scheme) {
 		composer.scheme = _scheme;
 	}
@@ -167,6 +183,21 @@
 		composer.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
 		[composer.navigationController presentViewController:controller animated:YES completion:nil];
 	}
+}
+
+- (void)composer:(RLPhotoComposerController *)composer didAddSticker:(RLStickerInfo *)stickerInfo {
+    if (_watermarkInfo){
+        composer.projectWatermark = _watermarkInfo;
+    }
+    
+}
+
+-(void)composer:(RLPhotoComposerController *)composer didSwitchToStickerPackAtIndex:(NSInteger)packIndex{
+    _watermarkInfo = nil;
+    RLStickerPackInfo *pack = _stickerPacks[packIndex];
+    if(pack.watermarkInfo){
+        _watermarkInfo = pack.watermarkInfo;
+    }
 }
 
 #pragma mark - properties

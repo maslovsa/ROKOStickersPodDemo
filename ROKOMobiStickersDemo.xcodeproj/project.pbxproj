@@ -1136,8 +1136,6 @@
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ROKOMobiStickersDemo/ThirdPartyFrameworks",
-					/Users/maslovsa/Projects/Frameworks,
 					"$(PROJECT_DIR)/ROKOMobiStickersDemo/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1170,8 +1168,6 @@
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ROKOMobiStickersDemo/ThirdPartyFrameworks",
-					/Users/maslovsa/Projects/Frameworks,
 					"$(PROJECT_DIR)/ROKOMobiStickersDemo/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
