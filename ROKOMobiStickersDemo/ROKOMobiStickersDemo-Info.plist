@@ -24,27 +24,10 @@
 	<string>1.1.7</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>com.carryquote.stickers</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>rokostickers</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleVersion</key>
 	<string>119</string>
-	<key>GoogleClientID</key>
-	<string>801885288110-l40vh0e8qtvn32ll0tnh6cq3elrr5k86.apps.googleusercontent.com</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>ROKOMobiAPIToken</key>
-	<string>aORQCaVcxd/A51ketrrtb1jyIqAipbZKfcEeidTkUm0=</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch</string>
 	<key>UIMainStoryboardFile</key>
