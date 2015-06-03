@@ -12,12 +12,13 @@
 #import <ROKOComponents/ROKOComponents.h>
 
 @interface ViewController () {
-	ROKOStickersCustomizer *_customizer;
+	//ROKOStickersCustomizer *_customizer;
 	ROKOStickersScheme *_scheme;
 	//ROKOStickersDataProvider *_dataProvider;
-    ROKOStickersWatermarkInfo *_currentWatermarkInfo;
+	ROKOStickersWatermarkInfo *_currentWatermarkInfo;
 
-	NSArray *_stickers;
+	NSArray *_stickerPacks;
+	NSDictionary *stickerPackToIconsCount;
 }
 
 - (IBAction)takePhotoButtonPressed:(UIButton *)sender;
@@ -29,29 +30,26 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	_customizer =  [[ROKOStickersCustomizer alloc]initWithBaseURL:@"rmsws.stage.rokolabs.com/external/v1/"];
-//	_dataProvider = [[ROKOStickersDataProvider alloc]initWithBaseURL:@"rmsws.stage.rokolabs.com/external/v1/"];
-//	[_dataProvider loadStickersWithCompletionBlock:^(id responseObject, NSError *error) {
-//		if (!error) {
-//			_stickers = responseObject;
-//		}
-//	}];
-    
-    
-    NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
-    [mutableArray addObject:[self getStickerPack: @"hats"]];
-    
-    _stickers = [mutableArray copy];
-    
+	//_customizer =  [[ROKOStickersCustomizer alloc]initWithBaseURL:@"rmsws.stage.rokolabs.com/external/v1/"];
+
+	stickerPackToIconsCount = @{ @"glasses" : @10, @"hats" : @9, @"mustaches" : @9,
+		                         @"baby" : @22, @"cake" : @9, @"cat" : @12, @"emoji" : @18, @"wedding" : @12 };
+	// AllKEys
+    _stickerPacks = @[[self getStickerPack:@"glasses"],
+	                  [self getStickerPack:@"hats"],
+	                  [self getStickerPack:@"mustaches"],
+	                  [self getStickerPack:@"baby"],
+	                  [self getStickerPack:@"cake"],
+	                  [self getStickerPack:@"cat"],
+	                  [self getStickerPack:@"emoji"],
+	                  [self getStickerPack:@"wedding"]];
 }
 
 - (void)dealloc {
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-
 	self.navigationController.navigationBarHidden = YES;
 }
 
@@ -63,22 +61,33 @@
 	[super didReceiveMemoryWarning];
 }
 
-- (RLStickerPackInfo *)getStickerPack:(NSString*)packName {
-    static int totalIdCounter = 0;
-    RLStickerPackInfo *packInfo = [RLStickerPackInfo new];
-    packInfo.title = packName;
-    packInfo.iconDefault = [UIImage imageNamed: [NSString stringWithFormat:@"%@_icon_default", packName]];
-    packInfo.iconSelected = [UIImage imageNamed: [NSString stringWithFormat:@"%@_icon_default", packName]];
-    packInfo.isLocked = NO;
-    packInfo.packID = totalIdCounter++;
-    int n = 1;
-    UIImage *i1 = [UIImage imageNamed:[NSString stringWithFormat:@"%@_%d", packName, n]];
-    n = 2;
-    UIImage *i2 = [UIImage imageNamed:[NSString stringWithFormat:@"%@_%d", packName, n]];
-    
-    packInfo.stickers = [NSArray arrayWithObjects: i1, i2, nil];
-    
-    return packInfo;
+- (RLStickerInfo *)stickerInfoWithIndex:(NSInteger)i packName:(NSString *)packName {
+    RLStickerInfo *info = [RLStickerInfo new];
+    info.name = [NSString stringWithFormat:@"%@_%@", packName, @(i + 1)];
+    info.icon = [UIImage imageNamed:info.name];
+    info.thumbnail = [UIImage imageNamed:info.name];
+    info.stickerID = i + 1;
+    return info;
+}
+
+- (RLStickerPackInfo *)getStickerPack:(NSString *)packName {
+	RLStickerPackInfo *packInfo = [RLStickerPackInfo new];
+	packInfo.title = packName;
+	packInfo.iconDefault = [UIImage imageNamed:[NSString stringWithFormat:@"%@_icon_default", packName]];
+	packInfo.iconSelected = [UIImage imageNamed:[NSString stringWithFormat:@"%@_icon_selected", packName]];
+	packInfo.isLocked = NO;
+
+    NSNumber *iconsCount = [stickerPackToIconsCount objectForKey:packName];
+	if (iconsCount) {
+		NSInteger count = [iconsCount integerValue];
+        NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:count];
+		for (NSInteger i = 0; i < count; ++i) {
+            RLStickerInfo *info = [self stickerInfoWithIndex:i packName:packName];
+			[mutableArray addObject:info];
+		}
+		packInfo.stickers = [mutableArray copy];
+	}
+	return packInfo;
 }
 
 #pragma mark - Button Interaction
@@ -108,29 +117,21 @@
 #pragma mark - RLPhotoComposerDataSource implementation
 
 - (NSInteger)numberOfStickerPacksInComposer:(RLPhotoComposerController *)composer {
-	return [_stickers count];
+	return [_stickerPacks count];
 }
 
 - (NSInteger)numberOfStickersInPackAtIndex:(NSInteger)packIndex composer:(RLPhotoComposerController *)composer {
-	RLStickerPackInfo *pack = _stickers[packIndex];
+	RLStickerPackInfo *pack = _stickerPacks[packIndex];
 	return [pack.stickers count];
 }
 
 - (RLStickerPackInfo *)composer:(RLPhotoComposerController *)composer infoForStickerPackAtIndex:(NSInteger)packIndex {
-	return _stickers[packIndex];
+	return _stickerPacks[packIndex];
 }
 
 - (RLStickerInfo *)composer:(RLPhotoComposerController *)composer infoForStickerAtIndex:(NSInteger)stickerIndex packIndex:(NSInteger)packIndex {
-	RLStickerPackInfo *pack = _stickers[packIndex];
-	ROKOSticker *sticker = pack.stickers[stickerIndex];
-	UIImage *image = sticker.imageInfo.image;
-
-	RLStickerInfo *info = [RLStickerInfo new];
-	info.iconURL = sticker.imageInfo.imageURL;
-	info.icon = image;
-	info.name = [NSString stringWithFormat:@"%@_%@", pack.title, @(stickerIndex + 1)];
-	info.stickerID = sticker.objectId.integerValue;
-
+	RLStickerPackInfo *pack = _stickerPacks[packIndex];
+	RLStickerInfo *info = pack.stickers[stickerIndex];
 	return info;
 }
 
@@ -166,30 +167,6 @@
 		composer.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
 		[composer.navigationController presentViewController:controller animated:YES completion:nil];
 	}
-}
-
-- (void)composer:(RLPhotoComposerController *)composer didAddSticker:(RLStickerInfo *)stickerInfo {
-    if (_currentWatermarkInfo){
-        composer.projectWatermark = [[RLWatermarkInfo alloc]initWithRokoStickersWatermarkInfo:_currentWatermarkInfo];
-    }
-   
-}
--(void)composer:(RLPhotoComposerController *)composer didSwitchToStickerPackAtIndex:(NSInteger)packIndex{
-    
-//        _currentWatermarkInfo = nil;
-//        ROKOStickerPack *pack = _stickers[packIndex];
-//
-//        if(pack.useWatermark){
-//            _currentWatermarkInfo = pack.watermark;
-//            _currentWatermarkInfo.position = pack.watermarkPosition;
-//            _currentWatermarkInfo.scale = pack.watermarkScaleFactor;
-//        }        
-}
-
-- (void)composer:(RLPhotoComposerController *)composer didRemoveSticker:(RLStickerInfo *)stickerInfo {
-//	if (composer.projectWatermark) {
-//		composer.projectWatermark = nil; //  FIX later
-//	}
 }
 
 #pragma mark - properties
