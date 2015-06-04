@@ -11,10 +11,19 @@
 #import <ROKOStickers/ROKOStickers.h>
 #import <ROKOComponents/ROKOComponents.h>
 
+//#define USE_LOCAL
+
 @interface ViewController () {
 	ROKOStickersScheme *_scheme;
-	NSArray *_stickerPacks;
-	NSDictionary *_stickerPackToIconsCount;
+    
+#ifdef USE_LOCAL
+    NSArray *_stickerPacks;
+    NSDictionary *_stickerPackToIconsCount;
+#else
+    ROKOPortalStickersDataSource *_dataSource;
+#endif
+    
+    
 }
 
 - (IBAction)takePhotoButtonPressed:(UIButton *)sender;
@@ -28,18 +37,22 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
-	_stickerPackToIconsCount = @{ @"glasses" : @10, @"hats" : @9, @"mustaches" : @9, @"baby" : @22,
-		                         @"cake" : @9, @"cat" : @12, @"emoji" : @18, @"wedding" : @12 };
-
-	NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:_stickerPackToIconsCount.allKeys.count];
-	for (NSString *key in _stickerPackToIconsCount.allKeys) {
-		[mutableArray addObject:[self getStickerPack:key]];
-	}
-	_stickerPacks = [mutableArray copy];
-	_scheme = [self createScheme];
-
-	[self addWatermarkToWeddingStickerPack];
+    
+#ifdef USE_LOCAL
+    _stickerPackToIconsCount = @{ @"glasses" : @10, @"hats" : @9, @"mustaches" : @9, @"baby" : @22,
+                                  @"cake" : @9, @"cat" : @12, @"emoji" : @18, @"wedding" : @12 };
+    
+    NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithCapacity:_stickerPackToIconsCount.allKeys.count];
+    for (NSString *key in _stickerPackToIconsCount.allKeys) {
+        [mutableArray addObject:[self getStickerPack:key]];
+    }
+    _stickerPacks = [mutableArray copy];
+    [self addWatermarkToWeddingStickerPack];
+#else
+    _dataSource = [[ROKOPortalStickersDataSource alloc]initWithManager:nil];
+#endif
+    
+    _scheme = [self createScheme];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -48,17 +61,6 @@
 }
 
 #pragma mark - Useful utilities
-
-- (void)addWatermarkToWeddingStickerPack {
-	for (RLStickerPackInfo *stickerPack in _stickerPacks) {
-		if ([stickerPack.title isEqualToString:@"wedding"]) {
-			RLWatermarkInfo *info = [RLWatermarkInfo new];
-			info.icon = [UIImage imageNamed:@"watermark_3"];
-			info.position = kRLWatermarkPositionBottomRight;
-			stickerPack.watermarkInfo = info;
-		}
-	}
-}
 
 - (ROKOStickersScheme *)createScheme {
 	ROKONavigationBarScheme *naviScheme = [ROKONavigationBarScheme new];
@@ -74,6 +76,7 @@
 
 	ROKOStickersScheme *scheme = [ROKOStickersScheme new];
 	scheme.configurationViaPortal = NO;
+    scheme.albumName = @"ROKO Strik";
 	scheme.navigationBarScheme = naviScheme;
 	scheme.trayScheme = trayScheme;
 	return scheme;
@@ -86,6 +89,18 @@
 	info.thumbnail = [UIImage imageNamed:info.name];
 	info.stickerID = i + 1;
 	return info;
+}
+
+#ifdef USE_LOCAL
+- (void)addWatermarkToWeddingStickerPack {
+    for (RLStickerPackInfo *stickerPack in _stickerPacks) {
+        if ([stickerPack.title isEqualToString:@"wedding"]) {
+            RLWatermarkInfo *info = [RLWatermarkInfo new];
+            info.icon = [UIImage imageNamed:@"watermark_3"];
+            info.position = kRLWatermarkPositionBottomRight;
+            stickerPack.watermarkInfo = info;
+        }
+    }
 }
 
 - (RLStickerPackInfo *)getStickerPack:(NSString *)packName {
@@ -107,6 +122,16 @@
 	}
 	return packInfo;
 }
+#endif
+
+#ifndef USE_LOCAL
+- (void)loadStickersForController:(RLComposerWorkflowController *)controller {
+    __weak RLPhotoComposerController *composer = controller.composer;
+    [_dataSource reloadStickersWithCompletionBlock:^(id responseObject, NSError *error) {
+        [composer reloadData];
+    }];
+}
+#endif
 
 #pragma mark - Button Interaction
 
@@ -114,8 +139,13 @@
 	RLComposerWorkflowController *workflowController = [RLComposerWorkflowController buildComposerWorkflowWithType:kRLComposerWorkflowTypeCamera useROKOCMS:NO];
 
 	if (nil != workflowController) {
-		workflowController.composer.dataSource = self;
-		workflowController.composer.delegate = self;
+#ifdef USE_LOCAL
+        workflowController.composer.dataSource = self;
+#else
+        workflowController.composer.dataSource = _dataSource;
+        [self loadStickersForController:workflowController];
+#endif
+        workflowController.composer.delegate = self;
 		[self presentViewController:workflowController animated:YES completion:nil];
 	}
 }
@@ -123,17 +153,21 @@
 - (IBAction)choosePhotoButtonPressed:(UIButton *)sender {
 	RLComposerWorkflowController *workflowController = [RLComposerWorkflowController buildComposerWorkflowWithType:kRLComposerWorkflowTypePhotoPicker useROKOCMS:NO];
 
-	if (nil != workflowController) {
-		RLPhotoComposerController *photoComposer = workflowController.composer;
-		photoComposer.delegate = self;
-		photoComposer.dataSource = self;
-
-		[self presentViewController:workflowController animated:YES completion:nil];
-	}
+    if (nil != workflowController) {
+#ifdef USE_LOCAL
+        workflowController.composer.dataSource = self;
+#else
+        workflowController.composer.dataSource = _dataSource;
+        [self loadStickersForController:workflowController];
+#endif
+        workflowController.composer.delegate = self;
+        [self presentViewController:workflowController animated:YES completion:nil];
+    }
 }
 
 #pragma mark - RLPhotoComposerDataSource implementation
 
+#ifdef USE_LOCAL
 - (NSInteger)numberOfStickerPacksInComposer:(RLPhotoComposerController *)composer {
 	return [_stickerPacks count];
 }
@@ -152,6 +186,7 @@
 	RLStickerInfo *info = pack.stickers[stickerIndex];
 	return info;
 }
+#endif
 
 #pragma mark - RLPhotoComposerDelegate implementation
 

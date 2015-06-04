@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <ROKOStickers/ROKOStickers.h>
 
+
+#ifdef USE_LOCAL
 @interface ViewController : UIViewController <RLPhotoComposerDelegate, RLPhotoComposerDataSource>
+#else
+@interface ViewController : UIViewController <RLPhotoComposerDelegate>
+#endif
 
 @end
