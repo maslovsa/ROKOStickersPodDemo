@@ -1,0 +1,26 @@
+PODS:
+  - ROKOBorocco (0.1.8):
+    - ROKOBorocco/Core (= 0.1.8)
+    - ROKOBorocco/Share (= 0.1.8)
+    - ROKOBorocco/Stickers (= 0.1.8)
+  - ROKOBorocco/Core (0.1.8)
+  - ROKOBorocco/Share (0.1.8)
+  - ROKOBorocco/Stickers (0.1.8)
+
+DEPENDENCIES:
+  - ROKOBorocco (from `https://github.com/maslovsa/ROKOComponents.git`, tag `0.1.8`)
+
+EXTERNAL SOURCES:
+  ROKOBorocco:
+    :git: https://github.com/maslovsa/ROKOComponents.git
+    :tag: 0.1.8
+
+CHECKOUT OPTIONS:
+  ROKOBorocco:
+    :git: https://github.com/maslovsa/ROKOComponents.git
+    :tag: 0.1.8
+
+SPEC CHECKSUMS:
+  ROKOBorocco: 8d4283945eb7c45a730b9500ec81461857c5bf74
+
+COCOAPODS: 0.37.2

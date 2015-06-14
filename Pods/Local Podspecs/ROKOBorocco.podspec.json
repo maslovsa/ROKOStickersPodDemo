@@ -1,0 +1,64 @@
+{
+  "name": "ROKOBorocco",
+  "version": "0.1.8",
+  "license": "MIT",
+  "homepage": "https://github.com/maslovsa/ROKOComponents",
+  "authors": {
+    "Alexey Golovenkov": "alexey.golovenkov@rokolabs.com",
+    "Denis Kempest": "denis.kempest@rokolabs.com",
+    "Sergey Maslov": "sergey.maslov@rokolabs.com"
+  },
+  "summary": "Very well ROKOBorocco.",
+  "source": {
+    "git": "https://github.com/maslovsa/ROKOComponents.git",
+    "tag": "0.1.8"
+  },
+  "social_media_url": "https://twitter.com/rokolabs",
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "default_subspecs": [
+    "Core",
+    "Share",
+    "Stickers"
+  ],
+  "subspecs": [
+    {
+      "name": "Core",
+      "frameworks": [
+        "SystemConfiguration",
+        "CFNetwork",
+        "CoreTelephony",
+        "CoreGraphics",
+        "CoreLocation",
+        "Foundation",
+        "UIKit"
+      ],
+      "vendored_frameworks": "Frameworks/ROKOComponents.framework",
+      "public_header_files": "Frameworks/ROKOComponents.framework/Versions/A/Headers/*.h"
+    },
+    {
+      "name": "Share",
+      "frameworks": "Accelerate",
+      "vendored_frameworks": "Frameworks/ROKOShare.framework",
+      "public_header_files": "Frameworks/ROKOShare.framework/Versions/A/Headers/*.h",
+      "resource_bundles": {
+        "ROKOShare": [
+          "Resources/ROKOShare.bundle"
+        ]
+      }
+    },
+    {
+      "name": "Stickers",
+      "frameworks": "CoreFoundation",
+      "vendored_frameworks": "Frameworks/ROKOStickers.framework",
+      "public_header_files": "Frameworks/ROKOStickers.framework/Versions/A/Headers/*.h",
+      "resource_bundles": {
+        "ROKOStickers": [
+          "Resources/ROKOStickers.bundle"
+        ]
+      }
+    }
+  ]
+}

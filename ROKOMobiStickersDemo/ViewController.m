@@ -11,7 +11,7 @@
 #import <ROKOStickers/ROKOStickers.h>
 #import <ROKOComponents/ROKOComponents.h>
 
-//#define USE_LOCAL
+#define USE_LOCAL
 
 @interface ViewController () {
 	ROKOStickersScheme *_scheme;

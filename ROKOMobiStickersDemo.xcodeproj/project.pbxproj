@@ -189,12 +189,8 @@
 		58F07A2D18D96E2B000BDECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F07A2B18D96E2B000BDECC /* Main.storyboard */; };
 		58F07A3218D96E2B000BDECC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F07A3118D96E2B000BDECC /* Images.xcassets */; };
 		58F07A5818D9723B000BDECC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F07A5718D9723B000BDECC /* QuartzCore.framework */; };
+		7FB515CF453FF781A36A1E80 /* libPods-ROKOMobiStickersDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D099DB24931D85307F3D5ADE /* libPods-ROKOMobiStickersDemo.a */; };
 		8F0A28121B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A28111B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.m */; };
-		8F0A28191B1DC6D80097C8B1 /* ROKOComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0A28141B1DC6D80097C8B1 /* ROKOComponents.framework */; };
-		8F0A281A1B1DC6D80097C8B1 /* ROKOShare.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A28151B1DC6D80097C8B1 /* ROKOShare.bundle */; };
-		8F0A281B1B1DC6D80097C8B1 /* ROKOShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0A28161B1DC6D80097C8B1 /* ROKOShare.framework */; };
-		8F0A281C1B1DC6D80097C8B1 /* ROKOStickers.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F0A28171B1DC6D80097C8B1 /* ROKOStickers.bundle */; };
-		8F0A281D1B1DC6D80097C8B1 /* ROKOStickers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0A28181B1DC6D80097C8B1 /* ROKOStickers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -392,11 +388,9 @@
 		58F07A5718D9723B000BDECC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8F0A28101B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROKOStickersSchemeCustomizer.h; sourceTree = "<group>"; };
 		8F0A28111B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROKOStickersSchemeCustomizer.m; sourceTree = "<group>"; };
-		8F0A28141B1DC6D80097C8B1 /* ROKOComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ROKOComponents.framework; sourceTree = "<group>"; };
-		8F0A28151B1DC6D80097C8B1 /* ROKOShare.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ROKOShare.bundle; sourceTree = "<group>"; };
-		8F0A28161B1DC6D80097C8B1 /* ROKOShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ROKOShare.framework; sourceTree = "<group>"; };
-		8F0A28171B1DC6D80097C8B1 /* ROKOStickers.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ROKOStickers.bundle; sourceTree = "<group>"; };
-		8F0A28181B1DC6D80097C8B1 /* ROKOStickers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ROKOStickers.framework; sourceTree = "<group>"; };
+		97830FCF0B9D192620CB6A2F /* Pods-ROKOMobiStickersDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ROKOMobiStickersDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ROKOMobiStickersDemo/Pods-ROKOMobiStickersDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CFCD45C5271B4FE0B331F9DF /* Pods-ROKOMobiStickersDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ROKOMobiStickersDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ROKOMobiStickersDemo/Pods-ROKOMobiStickersDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D099DB24931D85307F3D5ADE /* libPods-ROKOMobiStickersDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ROKOMobiStickersDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,9 +398,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F0A28191B1DC6D80097C8B1 /* ROKOComponents.framework in Frameworks */,
-				8F0A281D1B1DC6D80097C8B1 /* ROKOStickers.framework in Frameworks */,
-				8F0A281B1B1DC6D80097C8B1 /* ROKOShare.framework in Frameworks */,
 				58A9F0061907393600073909 /* CoreText.framework in Frameworks */,
 				58F07A1A18D96E2B000BDECC /* Foundation.framework in Frameworks */,
 				58A9F0081907393F00073909 /* MediaPlayer.framework in Frameworks */,
@@ -415,6 +406,7 @@
 				58A9F00E1907395B00073909 /* Social.framework in Frameworks */,
 				58A9F00C1907395500073909 /* SystemConfiguration.framework in Frameworks */,
 				58F07A1E18D96E2B000BDECC /* UIKit.framework in Frameworks */,
+				7FB515CF453FF781A36A1E80 /* libPods-ROKOMobiStickersDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,6 +681,7 @@
 				58F07A1F18D96E2B000BDECC /* ROKOMobiStickersDemo */,
 				58F07A1818D96E2B000BDECC /* Frameworks */,
 				58F07A1718D96E2B000BDECC /* Products */,
+				C1CA0AF35FD35E7CC1C35367 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -716,6 +709,7 @@
 				58F07A1918D96E2B000BDECC /* Foundation.framework */,
 				58F07A1B18D96E2B000BDECC /* CoreGraphics.framework */,
 				58F07A1D18D96E2B000BDECC /* UIKit.framework */,
+				D099DB24931D85307F3D5ADE /* libPods-ROKOMobiStickersDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -728,7 +722,6 @@
 				58F07A2918D96E2B000BDECC /* AppDelegate.m */,
 				58E333AF19549D9B00DCD786 /* ViewController.h */,
 				58E333B019549D9B00DCD786 /* ViewController.m */,
-				8F0A28131B1DC6D80097C8B1 /* Frameworks */,
 				8F0A28101B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.h */,
 				8F0A28111B1DB1F70097C8B1 /* ROKOStickersSchemeCustomizer.m */,
 				58F07A3118D96E2B000BDECC /* Images.xcassets */,
@@ -750,16 +743,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8F0A28131B1DC6D80097C8B1 /* Frameworks */ = {
+		C1CA0AF35FD35E7CC1C35367 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8F0A28141B1DC6D80097C8B1 /* ROKOComponents.framework */,
-				8F0A28151B1DC6D80097C8B1 /* ROKOShare.bundle */,
-				8F0A28161B1DC6D80097C8B1 /* ROKOShare.framework */,
-				8F0A28171B1DC6D80097C8B1 /* ROKOStickers.bundle */,
-				8F0A28181B1DC6D80097C8B1 /* ROKOStickers.framework */,
+				97830FCF0B9D192620CB6A2F /* Pods-ROKOMobiStickersDemo.debug.xcconfig */,
+				CFCD45C5271B4FE0B331F9DF /* Pods-ROKOMobiStickersDemo.release.xcconfig */,
 			);
-			path = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -769,9 +759,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58F07A4818D96E2B000BDECC /* Build configuration list for PBXNativeTarget "ROKOMobiStickersDemo" */;
 			buildPhases = (
+				BCAC7F72D4720B3F52115D79 /* Check Pods Manifest.lock */,
 				58F07A1218D96E2B000BDECC /* Sources */,
 				58F07A1318D96E2B000BDECC /* Frameworks */,
 				58F07A1418D96E2B000BDECC /* Resources */,
+				7BFF10A861D503EDADBF1AFD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -829,7 +821,6 @@
 				58EE082B1961E3CB00F1E40D /* emoji_icon_default@2x.png in Resources */,
 				270903701ADBED7E0055292F /* emoji_9@2x.png in Resources */,
 				588769401975130A00A63ECA /* cake_5@2x.png in Resources */,
-				8F0A281A1B1DC6D80097C8B1 /* ROKOShare.bundle in Resources */,
 				58EE08541961E3CB00F1E40D /* wedding_5@2x.png in Resources */,
 				58EF655E190BB94100D23ED3 /* Codes.plist in Resources */,
 				58EE08561961E3CB00F1E40D /* wedding_9@2x.png in Resources */,
@@ -913,7 +904,6 @@
 				27E6F37E1AD905CF000100B9 /* emoji_17@3x.png in Resources */,
 				27AA4F9B1ABAF3FB0007FDB7 /* hats_2@2x.png in Resources */,
 				58EE07FE1961E3CB00F1E40D /* baby_4@2x.png in Resources */,
-				8F0A281C1B1DC6D80097C8B1 /* ROKOStickers.bundle in Resources */,
 				58EE084E1961E3CB00F1E40D /* watermark_4@2x.png in Resources */,
 				27E6F3791AD905CF000100B9 /* emoji_12@3x.png in Resources */,
 				58876959197514F100A63ECA /* cat_9@2x.png in Resources */,
@@ -996,6 +986,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BFF10A861D503EDADBF1AFD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ROKOMobiStickersDemo/Pods-ROKOMobiStickersDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCAC7F72D4720B3F52115D79 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58F07A1218D96E2B000BDECC /* Sources */ = {
@@ -1105,6 +1128,7 @@
 		};
 		58F07A4918D96E2B000BDECC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97830FCF0B9D192620CB6A2F /* Pods-ROKOMobiStickersDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1112,19 +1136,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ROKOMobiStickersDemo/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ROKOMobiStickersDemo/ROKOMobiStickersDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "ROKOMobiStickersDemo/ROKOMobiStickersDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = (
-					"-ObjC\n-ObjC",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "29ed0c0d-30a8-4942-9a62-b539a5fdb6ac";
 				WRAPPER_EXTENSION = app;
@@ -1133,6 +1153,7 @@
 		};
 		58F07A4A18D96E2B000BDECC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFCD45C5271B4FE0B331F9DF /* Pods-ROKOMobiStickersDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1140,19 +1161,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: CarryQuote, Inc.";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: CarryQuote, Inc.";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ROKOMobiStickersDemo/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ROKOMobiStickersDemo/ROKOMobiStickersDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "ROKOMobiStickersDemo/ROKOMobiStickersDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = (
-					"-ObjC\n-ObjC",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fd450fb3-ce6b-4d4f-a84b-8c0a7833e04e";
 				WRAPPER_EXTENSION = app;

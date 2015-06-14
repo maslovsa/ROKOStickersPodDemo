@@ -1,0 +1,1 @@
+../../../ROKOBorocco/Frameworks/ROKOStickers.framework/Versions/A/Headers/RLStickerInfo.h
