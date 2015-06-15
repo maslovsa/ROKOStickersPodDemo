@@ -7,229 +7,229 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17DED2FBDF5A4830148DEA15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E23B2807CEB99FF32361999 /* Foundation.framework */; };
-		22C4AFEF24FD032EC3D497B8 /* ROKOStickers.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF36CF066B44BE27B4F439A5 /* ROKOStickers.bundle */; };
-		C0D37BD1C732CF157E82FFF2 /* Pods-ROKOMobiStickersDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B748F9C63DB5D43FE11E81C7 /* Pods-ROKOMobiStickersDemo-dummy.m */; };
-		E1E0DEBC0F0B50FE52CFA1CE /* ROKOShare.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78F0FF2435963DD4AEB41FD8 /* ROKOShare.bundle */; };
+		0A970FA2E406379375E2C9B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCED929B405CB3E1D6C83CF7 /* Foundation.framework */; };
+		26B59326259B81E06482B897 /* Pods-ROKOMobiStickersDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CCAB047CE93385F474D45E /* Pods-ROKOMobiStickersDemo-dummy.m */; };
+		93EF1FF75AF6C75E892CCF05 /* ROKOShare.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8EC62808476492A5EAD8AEAB /* ROKOShare.bundle */; };
+		CFF1B534DF4123BF40A249F1 /* ROKOStickers.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 11F9D23BE42AB2B18966E46B /* ROKOStickers.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7CDFA47E4DCEB6D15E152EC8 /* PBXContainerItemProxy */ = {
+		3D31409689B39950DAC60D87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4AB62B222B98BB6CB8BF594F /* Project object */;
+			containerPortal = 29304D2E6BA82FCA6D361836 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0E0F025D0CA5AE5A702F7A8E;
-			remoteInfo = "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers";
-		};
-		B17B31F80C014EBADDDF7E39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4AB62B222B98BB6CB8BF594F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 70D7F0206E0CD826AB8657BD;
+			remoteGlobalIDString = AD32C92DD1412EDA33B0E3D5;
 			remoteInfo = "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare";
+		};
+		B2413A332C3576C5FB1FB498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29304D2E6BA82FCA6D361836 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B81084322AF1EAF15BC9825;
+			remoteInfo = "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03D54B85E8C70DA057AA1267 /* Pods-ROKOMobiStickersDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ROKOMobiStickersDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		12B4BCE15F694507288FA454 /* Pods-ROKOMobiStickersDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ROKOMobiStickersDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2D0D5F20E804873C302EFAC1 /* Pods-ROKOMobiStickersDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ROKOMobiStickersDemo.release.xcconfig"; sourceTree = "<group>"; };
-		5F043BF7D46AA2D2FE8A3CB5 /* ROKOShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ROKOShare.framework; path = Frameworks/ROKOShare.framework; sourceTree = "<group>"; };
-		78F0FF2435963DD4AEB41FD8 /* ROKOShare.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ROKOShare.bundle; path = Resources/ROKOShare.bundle; sourceTree = "<group>"; };
-		8FF5BC33EE2F082C6B386C71 /* ROKOStickers.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROKOStickers.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		94158078D9808078E924D75C /* ROKOStickers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ROKOStickers.framework; path = Frameworks/ROKOStickers.framework; sourceTree = "<group>"; };
-		9DEC40D98A1597E6F67ED7B0 /* ROKOShare.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROKOShare.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E23B2807CEB99FF32361999 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A6C62D219023A4AE7ABC91D5 /* Pods-ROKOMobiStickersDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ROKOMobiStickersDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		A75BC488BDA0BE5D5206616A /* Pods-ROKOMobiStickersDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ROKOMobiStickersDemo-resources.sh"; sourceTree = "<group>"; };
-		AF36CF066B44BE27B4F439A5 /* ROKOStickers.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ROKOStickers.bundle; path = Resources/ROKOStickers.bundle; sourceTree = "<group>"; };
-		B748F9C63DB5D43FE11E81C7 /* Pods-ROKOMobiStickersDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ROKOMobiStickersDemo-dummy.m"; sourceTree = "<group>"; };
-		D17367FC356E1D0DA4474960 /* ROKOComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ROKOComponents.framework; path = Frameworks/ROKOComponents.framework; sourceTree = "<group>"; };
-		DF3E5960552B5BB6B8003E18 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		EB46DAF3B679BF68436FD132 /* libPods-ROKOMobiStickersDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ROKOMobiStickersDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6C8D069B6C796AAC2CB3F54 /* Pods-ROKOMobiStickersDemo-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ROKOMobiStickersDemo-environment.h"; sourceTree = "<group>"; };
+		027DE25E1948A9137971C984 /* libPods-ROKOMobiStickersDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ROKOMobiStickersDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F9D23BE42AB2B18966E46B /* ROKOStickers.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ROKOStickers.bundle; path = Resources/ROKOStickers.bundle; sourceTree = "<group>"; };
+		1EF41B9BB538916052E546A1 /* ROKOComponents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ROKOComponents.framework; path = Frameworks/ROKOComponents.framework; sourceTree = "<group>"; };
+		32CA012D3468F6460968536F /* ROKOShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ROKOShare.framework; path = Frameworks/ROKOShare.framework; sourceTree = "<group>"; };
+		3C93FA4FE18470284E77E1E7 /* Pods-ROKOMobiStickersDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ROKOMobiStickersDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4BFD987793C06EED9DCF6829 /* Pods-ROKOMobiStickersDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ROKOMobiStickersDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4D3DE97442C72C86DB88BE8A /* ROKOShare.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROKOShare.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		552393D28BCF274F79CEEA43 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5754E222B881F920F85FBD33 /* Pods-ROKOMobiStickersDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ROKOMobiStickersDemo-resources.sh"; sourceTree = "<group>"; };
+		872497DE4C24F20D0E96C49C /* ROKOStickers.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROKOStickers.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BF3D279D99BD47C6484D8F5 /* Pods-ROKOMobiStickersDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ROKOMobiStickersDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8EC62808476492A5EAD8AEAB /* ROKOShare.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ROKOShare.bundle; path = Resources/ROKOShare.bundle; sourceTree = "<group>"; };
+		9C7B02F0F0F49F6745DA205C /* ROKOStickers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ROKOStickers.framework; path = Frameworks/ROKOStickers.framework; sourceTree = "<group>"; };
+		B3CCAB047CE93385F474D45E /* Pods-ROKOMobiStickersDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ROKOMobiStickersDemo-dummy.m"; sourceTree = "<group>"; };
+		BF684FE0F94C999F234C4E83 /* Pods-ROKOMobiStickersDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ROKOMobiStickersDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		E08F0840C758B8BEFB7515E6 /* Pods-ROKOMobiStickersDemo-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ROKOMobiStickersDemo-environment.h"; sourceTree = "<group>"; };
+		FCED929B405CB3E1D6C83CF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		28CE3CDA79FB4793EEB9A2A4 /* Frameworks */ = {
+		0E8F241A830935AEC9EF7085 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B03BC23F5402B65088E23C2 /* Frameworks */ = {
+		28E4A434A2718B2BAD180EC9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17DED2FBDF5A4830148DEA15 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B926AA71A23E522DF099E3EB /* Frameworks */ = {
+		6AAC4F3C186C57E39A7C0695 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A970FA2E406379375E2C9B3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0637577B43188A016B2161CE /* Targets Support Files */ = {
+		0407D25E0329E56FBC8695D4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4D89A9C42034100D3BDDC89A /* Pods-ROKOMobiStickersDemo */,
+				11F9D23BE42AB2B18966E46B /* ROKOStickers.bundle */,
 			);
-			name = "Targets Support Files";
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		37081D5D6737E0E8D84FAE65 /* Frameworks */ = {
+		05E91701A7E1AD59AC9E2474 = {
 			isa = PBXGroup;
 			children = (
-				5F043BF7D46AA2D2FE8A3CB5 /* ROKOShare.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		37A392BBDD42674C9355A62A = {
-			isa = PBXGroup;
-			children = (
-				DF3E5960552B5BB6B8003E18 /* Podfile */,
-				D4B8D847C28C1235C529AD21 /* Frameworks */,
-				B996398EAB97D5E0FF71264D /* Pods */,
-				412D294A81D5266AF580BFCD /* Products */,
-				0637577B43188A016B2161CE /* Targets Support Files */,
+				552393D28BCF274F79CEEA43 /* Podfile */,
+				7473702632D2037626C28143 /* Frameworks */,
+				98AED68F1F211AD8C270B0F2 /* Pods */,
+				2453E3D854269F3269977A1E /* Products */,
+				D346E8D5320546F0C584C302 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		412D294A81D5266AF580BFCD /* Products */ = {
+		1F5CCBE880FB7E8CEAA3F426 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9DEC40D98A1597E6F67ED7B0 /* ROKOShare.bundle */,
-				8FF5BC33EE2F082C6B386C71 /* ROKOStickers.bundle */,
-				EB46DAF3B679BF68436FD132 /* libPods-ROKOMobiStickersDemo.a */,
+				8EC62808476492A5EAD8AEAB /* ROKOShare.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2453E3D854269F3269977A1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D3DE97442C72C86DB88BE8A /* ROKOShare.bundle */,
+				872497DE4C24F20D0E96C49C /* ROKOStickers.bundle */,
+				027DE25E1948A9137971C984 /* libPods-ROKOMobiStickersDemo.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D89A9C42034100D3BDDC89A /* Pods-ROKOMobiStickersDemo */ = {
+		337F50BA983858ECB6484925 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				12B4BCE15F694507288FA454 /* Pods-ROKOMobiStickersDemo-acknowledgements.markdown */,
-				A6C62D219023A4AE7ABC91D5 /* Pods-ROKOMobiStickersDemo-acknowledgements.plist */,
-				B748F9C63DB5D43FE11E81C7 /* Pods-ROKOMobiStickersDemo-dummy.m */,
-				F6C8D069B6C796AAC2CB3F54 /* Pods-ROKOMobiStickersDemo-environment.h */,
-				A75BC488BDA0BE5D5206616A /* Pods-ROKOMobiStickersDemo-resources.sh */,
-				03D54B85E8C70DA057AA1267 /* Pods-ROKOMobiStickersDemo.debug.xcconfig */,
-				2D0D5F20E804873C302EFAC1 /* Pods-ROKOMobiStickersDemo.release.xcconfig */,
+				1EF41B9BB538916052E546A1 /* ROKOComponents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		350966F589081143E2642BF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C7B02F0F0F49F6745DA205C /* ROKOStickers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DFD18117D2F37534454F529 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				B8F8CD79CF86338F59746CB3 /* Frameworks */,
+				1F5CCBE880FB7E8CEAA3F426 /* Resources */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
+		7473702632D2037626C28143 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A29EFE9F26673B8DDF575A70 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		891FD1D001C290A8580F81D6 /* Pods-ROKOMobiStickersDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4BFD987793C06EED9DCF6829 /* Pods-ROKOMobiStickersDemo-acknowledgements.markdown */,
+				BF684FE0F94C999F234C4E83 /* Pods-ROKOMobiStickersDemo-acknowledgements.plist */,
+				B3CCAB047CE93385F474D45E /* Pods-ROKOMobiStickersDemo-dummy.m */,
+				E08F0840C758B8BEFB7515E6 /* Pods-ROKOMobiStickersDemo-environment.h */,
+				5754E222B881F920F85FBD33 /* Pods-ROKOMobiStickersDemo-resources.sh */,
+				3C93FA4FE18470284E77E1E7 /* Pods-ROKOMobiStickersDemo.debug.xcconfig */,
+				8BF3D279D99BD47C6484D8F5 /* Pods-ROKOMobiStickersDemo.release.xcconfig */,
 			);
 			name = "Pods-ROKOMobiStickersDemo";
 			path = "Target Support Files/Pods-ROKOMobiStickersDemo";
 			sourceTree = "<group>";
 		};
-		566B7BB9533B6D230F23904A /* ROKOBorocco */ = {
+		98AED68F1F211AD8C270B0F2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A4C8B444F897028D75432667 /* Core */,
-				7AA8FA93B1DD82BE2250CAA1 /* Share */,
-				6703F601CBB879C6C8C4C056 /* Stickers */,
-			);
-			path = ROKOBorocco;
-			sourceTree = "<group>";
-		};
-		6703F601CBB879C6C8C4C056 /* Stickers */ = {
-			isa = PBXGroup;
-			children = (
-				736CA83DE3BB33DC3F991587 /* Frameworks */,
-				D5A709087F0D8D526FA687F1 /* Resources */,
-			);
-			name = Stickers;
-			sourceTree = "<group>";
-		};
-		736CA83DE3BB33DC3F991587 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				94158078D9808078E924D75C /* ROKOStickers.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7AA8FA93B1DD82BE2250CAA1 /* Share */ = {
-			isa = PBXGroup;
-			children = (
-				37081D5D6737E0E8D84FAE65 /* Frameworks */,
-				FB656336C82BD826CB20D74B /* Resources */,
-			);
-			name = Share;
-			sourceTree = "<group>";
-		};
-		A4C8B444F897028D75432667 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				F56C25336DB52AF015DB674E /* Frameworks */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		A99A88686D2FCEB201E89D55 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				9E23B2807CEB99FF32361999 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		B996398EAB97D5E0FF71264D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				566B7BB9533B6D230F23904A /* ROKOBorocco */,
+				F8DDC1F62059C0BA01051DF0 /* ROKOBorocco */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D4B8D847C28C1235C529AD21 /* Frameworks */ = {
+		A29EFE9F26673B8DDF575A70 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A99A88686D2FCEB201E89D55 /* iOS */,
+				FCED929B405CB3E1D6C83CF7 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B62F8E74B59E96A87819E72E /* Stickers */ = {
+			isa = PBXGroup;
+			children = (
+				350966F589081143E2642BF6 /* Frameworks */,
+				0407D25E0329E56FBC8695D4 /* Resources */,
+			);
+			name = Stickers;
+			sourceTree = "<group>";
+		};
+		B8F8CD79CF86338F59746CB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32CA012D3468F6460968536F /* ROKOShare.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D5A709087F0D8D526FA687F1 /* Resources */ = {
+		D346E8D5320546F0C584C302 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF36CF066B44BE27B4F439A5 /* ROKOStickers.bundle */,
+				891FD1D001C290A8580F81D6 /* Pods-ROKOMobiStickersDemo */,
 			);
-			name = Resources;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F56C25336DB52AF015DB674E /* Frameworks */ = {
+		DA8F116EC4EBC4690F77B22A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D17367FC356E1D0DA4474960 /* ROKOComponents.framework */,
+				337F50BA983858ECB6484925 /* Frameworks */,
 			);
-			name = Frameworks;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		FB656336C82BD826CB20D74B /* Resources */ = {
+		F8DDC1F62059C0BA01051DF0 /* ROKOBorocco */ = {
 			isa = PBXGroup;
 			children = (
-				78F0FF2435963DD4AEB41FD8 /* ROKOShare.bundle */,
+				DA8F116EC4EBC4690F77B22A /* Core */,
+				4DFD18117D2F37534454F529 /* Share */,
+				B62F8E74B59E96A87819E72E /* Stickers */,
 			);
-			name = Resources;
+			path = ROKOBorocco;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0E0F025D0CA5AE5A702F7A8E /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers */ = {
+		8B81084322AF1EAF15BC9825 /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CCC83ADE70F83BFBF3E8755 /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers" */;
+			buildConfigurationList = 1370152C3F65B219D331A70D /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers" */;
 			buildPhases = (
-				AB19C6A38DB2291C9B41A59E /* Sources */,
-				B926AA71A23E522DF099E3EB /* Frameworks */,
-				0C344CED3CF23CBDC7F07F6C /* Resources */,
+				CC85D7DA0620C2C179E8300C /* Sources */,
+				28E4A434A2718B2BAD180EC9 /* Frameworks */,
+				B036867ABC34843D86AB65AB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -237,16 +237,34 @@
 			);
 			name = "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers";
 			productName = "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers";
-			productReference = 8FF5BC33EE2F082C6B386C71 /* ROKOStickers.bundle */;
+			productReference = 872497DE4C24F20D0E96C49C /* ROKOStickers.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		70D7F0206E0CD826AB8657BD /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare */ = {
+		9CF1D6DB9FE9DBC06FF003CA /* Pods-ROKOMobiStickersDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33489B4563B6A31A37DB1388 /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare" */;
+			buildConfigurationList = 21B3533733706C6EA8870C32 /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo" */;
 			buildPhases = (
-				D8BDF880D5659830125EEF04 /* Sources */,
-				28CE3CDA79FB4793EEB9A2A4 /* Frameworks */,
-				BF3ADD890E4EE59167428126 /* Resources */,
+				A055C63971CCC49E347B4768 /* Sources */,
+				6AAC4F3C186C57E39A7C0695 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF243B44F9BC8D79452652F1 /* PBXTargetDependency */,
+				F43AC11C4795D92B8FCE3611 /* PBXTargetDependency */,
+			);
+			name = "Pods-ROKOMobiStickersDemo";
+			productName = "Pods-ROKOMobiStickersDemo";
+			productReference = 027DE25E1948A9137971C984 /* libPods-ROKOMobiStickersDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AD32C92DD1412EDA33B0E3D5 /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 619FEA7DC30E110DF18A9C1C /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare" */;
+			buildPhases = (
+				82481597809B5226634FE8F2 /* Sources */,
+				0E8F241A830935AEC9EF7085 /* Frameworks */,
+				DEA68C254518C0CCFD74CFA8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -254,176 +272,97 @@
 			);
 			name = "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare";
 			productName = "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare";
-			productReference = 9DEC40D98A1597E6F67ED7B0 /* ROKOShare.bundle */;
+			productReference = 4D3DE97442C72C86DB88BE8A /* ROKOShare.bundle */;
 			productType = "com.apple.product-type.bundle";
-		};
-		78BAE03A4EF5437473676F4D /* Pods-ROKOMobiStickersDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 64CA59AAC0F90C0EEBA73B7A /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo" */;
-			buildPhases = (
-				FBA8C9BC22DC854BDA0DC8FE /* Sources */,
-				9B03BC23F5402B65088E23C2 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0EC6C8FB5BBD8F6CBE620A82 /* PBXTargetDependency */,
-				2C08B72A575C773A2C79F1AD /* PBXTargetDependency */,
-			);
-			name = "Pods-ROKOMobiStickersDemo";
-			productName = "Pods-ROKOMobiStickersDemo";
-			productReference = EB46DAF3B679BF68436FD132 /* libPods-ROKOMobiStickersDemo.a */;
-			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4AB62B222B98BB6CB8BF594F /* Project object */ = {
+		29304D2E6BA82FCA6D361836 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 9E38DCE80723FD14805B2C5A /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 6180DAA7EF22F572E28766CE /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 37A392BBDD42674C9355A62A;
-			productRefGroup = 412D294A81D5266AF580BFCD /* Products */;
+			mainGroup = 05E91701A7E1AD59AC9E2474;
+			productRefGroup = 2453E3D854269F3269977A1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				78BAE03A4EF5437473676F4D /* Pods-ROKOMobiStickersDemo */,
-				70D7F0206E0CD826AB8657BD /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare */,
-				0E0F025D0CA5AE5A702F7A8E /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers */,
+				9CF1D6DB9FE9DBC06FF003CA /* Pods-ROKOMobiStickersDemo */,
+				AD32C92DD1412EDA33B0E3D5 /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare */,
+				8B81084322AF1EAF15BC9825 /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0C344CED3CF23CBDC7F07F6C /* Resources */ = {
+		B036867ABC34843D86AB65AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C4AFEF24FD032EC3D497B8 /* ROKOStickers.bundle in Resources */,
+				CFF1B534DF4123BF40A249F1 /* ROKOStickers.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF3ADD890E4EE59167428126 /* Resources */ = {
+		DEA68C254518C0CCFD74CFA8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E0DEBC0F0B50FE52CFA1CE /* ROKOShare.bundle in Resources */,
+				93EF1FF75AF6C75E892CCF05 /* ROKOShare.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AB19C6A38DB2291C9B41A59E /* Sources */ = {
+		82481597809B5226634FE8F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8BDF880D5659830125EEF04 /* Sources */ = {
+		A055C63971CCC49E347B4768 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B59326259B81E06482B897 /* Pods-ROKOMobiStickersDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBA8C9BC22DC854BDA0DC8FE /* Sources */ = {
+		CC85D7DA0620C2C179E8300C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0D37BD1C732CF157E82FFF2 /* Pods-ROKOMobiStickersDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0EC6C8FB5BBD8F6CBE620A82 /* PBXTargetDependency */ = {
+		CF243B44F9BC8D79452652F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare";
-			target = 70D7F0206E0CD826AB8657BD /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare */;
-			targetProxy = B17B31F80C014EBADDDF7E39 /* PBXContainerItemProxy */;
+			target = AD32C92DD1412EDA33B0E3D5 /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare */;
+			targetProxy = 3D31409689B39950DAC60D87 /* PBXContainerItemProxy */;
 		};
-		2C08B72A575C773A2C79F1AD /* PBXTargetDependency */ = {
+		F43AC11C4795D92B8FCE3611 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers";
-			target = 0E0F025D0CA5AE5A702F7A8E /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers */;
-			targetProxy = 7CDFA47E4DCEB6D15E152EC8 /* PBXContainerItemProxy */;
+			target = 8B81084322AF1EAF15BC9825 /* Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers */;
+			targetProxy = B2413A332C3576C5FB1FB498 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1E8EDFC037F66472C1CECEC3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D0D5F20E804873C302EFAC1 /* Pods-ROKOMobiStickersDemo.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		4CF61DC536FB8310D674CD7F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5D35F12DEB2F2AEF18DB6F5E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = ROKOStickers;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		70081747D1280CE1978D233D /* Debug */ = {
+		52E7A5405EB77D92B9337618 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -462,7 +401,34 @@
 			};
 			name = Debug;
 		};
-		804D8BD62DF7D83B73181C5A /* Release */ = {
+		55CA114C0EA34999C166E10C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = ROKOShare;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		7A16F69C77EDC8A20F1482C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BF3D279D99BD47C6484D8F5 /* Pods-ROKOMobiStickersDemo.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8AA857C741D27526C73B6523 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -473,7 +439,18 @@
 			};
 			name = Release;
 		};
-		86000D3F9EBABC03F59AED4D /* Debug */ = {
+		BA6A9818896E542D11BB3708 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = ROKOStickers;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		CBDFD80DA4B15C62F2C515BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -484,9 +461,43 @@
 			};
 			name = Debug;
 		};
-		C1C364C0DC21DC93B7404571 /* Debug */ = {
+		CC97D6405A806C9DEF0DA46F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03D54B85E8C70DA057AA1267 /* Pods-ROKOMobiStickersDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E87D3F0175CEB43D7D8F06AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C93FA4FE18470284E77E1E7 /* Pods-ROKOMobiStickersDemo.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -500,57 +511,46 @@
 			};
 			name = Debug;
 		};
-		FAA01D85BEBA3869C5E73D97 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = ROKOShare;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33489B4563B6A31A37DB1388 /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare" */ = {
+		1370152C3F65B219D331A70D /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAA01D85BEBA3869C5E73D97 /* Debug */,
-				804D8BD62DF7D83B73181C5A /* Release */,
+				CBDFD80DA4B15C62F2C515BB /* Debug */,
+				BA6A9818896E542D11BB3708 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64CA59AAC0F90C0EEBA73B7A /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo" */ = {
+		21B3533733706C6EA8870C32 /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1C364C0DC21DC93B7404571 /* Debug */,
-				1E8EDFC037F66472C1CECEC3 /* Release */,
+				E87D3F0175CEB43D7D8F06AB /* Debug */,
+				7A16F69C77EDC8A20F1482C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CCC83ADE70F83BFBF3E8755 /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOStickers" */ = {
+		6180DAA7EF22F572E28766CE /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86000D3F9EBABC03F59AED4D /* Debug */,
-				5D35F12DEB2F2AEF18DB6F5E /* Release */,
+				52E7A5405EB77D92B9337618 /* Debug */,
+				CC97D6405A806C9DEF0DA46F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9E38DCE80723FD14805B2C5A /* Build configuration list for PBXProject "Pods" */ = {
+		619FEA7DC30E110DF18A9C1C /* Build configuration list for PBXNativeTarget "Pods-ROKOMobiStickersDemo-ROKOBorocco-ROKOShare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				70081747D1280CE1978D233D /* Debug */,
-				4CF61DC536FB8310D674CD7F /* Release */,
+				55CA114C0EA34999C166E10C /* Debug */,
+				8AA857C741D27526C73B6523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4AB62B222B98BB6CB8BF594F /* Project object */;
+	rootObject = 29304D2E6BA82FCA6D361836 /* Project object */;
 }
